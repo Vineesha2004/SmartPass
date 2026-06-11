@@ -1,6 +1,6 @@
 // src/api/smartpassAPI.js
 
-const BASE_URL = '/api';
+const BASE_URL = 'https://smartpass-backend-ttd4.onrender.com/api';
 
 // ─── Helper: get saved JWT token ───────────────────────────
 const getToken = () => localStorage.getItem('smartpass_token');

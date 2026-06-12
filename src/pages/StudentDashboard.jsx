@@ -210,53 +210,60 @@ const StudentDashboard = () => {
 
       </main>
 
-      {/* MODAL */}
+      {/* MODAL */}  
       {showModal && (
         <div className="modal-overlay">
-          <div className="modal">
-            <h3>Apply for Pass</h3>
+  <div className="modal">
 
-            <form onSubmit={handleSubmit}>
-              <input
-                className="form-input"
-                placeholder="Reason"
-                value={form.reason}
-                onChange={e => setForm({ ...form, reason: e.target.value })}
-                required
-              />
+    {/* ✅ CLOSE BUTTON */}
+    <button
+      className="modal-close"
+      onClick={() => setShowModal(false)}
+    >
+      ✕
+    </button>
 
-              <input
-                className="form-input"
-                placeholder='Start date'
-                type="date"
-                value={form.date}
-                onChange={e => setForm({ ...form, date: e.target.value })}
-                required
-              />
+    <h3>Apply for Pass</h3>
 
-              <input
-                className="form-input"
-                placeholder='End date'
-                type="date"
-                value={form.returnDate}
-                onChange={e => setForm({ ...form, returnDate: e.target.value })}
-                required
-              />
+    <form onSubmit={handleSubmit}>
+      <input
+        className="form-input"
+        placeholder="Reason"
+        value={form.reason}
+        onChange={e => setForm({ ...form, reason: e.target.value })}
+        required
+      />
 
-              <textarea
-                className="form-textarea"
-                placeholder="Notes"
-                value={form.notes}
-                onChange={e => setForm({ ...form, notes: e.target.value })}
-              />
+      <input
+        className="form-input"
+        type="date"
+        value={form.date}
+        onChange={e => setForm({ ...form, date: e.target.value })}
+        required
+      />
 
-              <button className="btn-modal-primary" disabled={loading}>
-                {loading ? "Submitting..." : "Submit"}
-              </button>
-            </form>
+      <input
+        className="form-input"
+        type="date"
+        value={form.returnDate}
+        onChange={e => setForm({ ...form, returnDate: e.target.value })}
+        required
+      />
 
-          </div>
-        </div>
+      <textarea
+        className="form-textarea"
+        placeholder="Notes"
+        value={form.notes}
+        onChange={e => setForm({ ...form, notes: e.target.value })}
+      />
+
+      <button className="btn-modal-primary" disabled={loading}>
+        {loading ? "Submitting..." : "Submit"}
+      </button>
+    </form>
+
+  </div>
+</div>
       )}
 
     </div>

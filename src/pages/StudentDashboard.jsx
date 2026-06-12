@@ -227,6 +227,7 @@ const StudentDashboard = () => {
 
               <input
                 className="form-input"
+                placeholder='Start date'
                 type="date"
                 value={form.date}
                 onChange={e => setForm({ ...form, date: e.target.value })}
@@ -235,6 +236,7 @@ const StudentDashboard = () => {
 
               <input
                 className="form-input"
+                placeholder='End date'
                 type="date"
                 value={form.returnDate}
                 onChange={e => setForm({ ...form, returnDate: e.target.value })}

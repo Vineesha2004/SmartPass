@@ -24,6 +24,7 @@ app.use(
     origin: [
       'http://localhost:3000',  // React dev server
       'http://localhost:5173',  // Vite dev server (if using Vite)
+       'https://smart-passs.netlify.app' 
     ],
     credentials: true,
   })
